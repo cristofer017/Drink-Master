@@ -7,14 +7,20 @@ import { IonicModule } from '@ionic/angular';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './pages';
+import { ProgressBarComponent, SettingsActionsComponent } from './components';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    DashboardPageRoutingModule,
   ],
-  declarations: [DashboardPage]
+  declarations: [
+    DashboardPage,
+    ProgressBarComponent,
+    SettingsActionsComponent,
+  ]
 })
 export class DashboardPageModule {}
