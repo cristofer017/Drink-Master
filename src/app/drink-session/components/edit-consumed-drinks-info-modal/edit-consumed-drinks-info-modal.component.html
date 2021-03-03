@@ -1,0 +1,28 @@
+<div class="consumed-drinks-modal">
+  <div class="close-alert" (click)="close()">
+    <span>X</span>
+  </div>
+  <ion-card [formGroup]="formGroup">
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-input type="text"
+                 formControlName="date"
+                 name="date">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Alcohol Volume</ion-label>
+      <ion-input type="text"
+                 formControlName="alcVolume"
+                 name="alcVolume">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Alcohol Percentage</ion-label>
+      <ion-input type="text"
+                 formControlName="alcPercentage"
+                 name="alcPercentage">
+      </ion-input>
+    </ion-item>
+  </ion-card>
+</div>

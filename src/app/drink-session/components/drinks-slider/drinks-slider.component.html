@@ -1,0 +1,22 @@
+<div class="slider-arrows">
+  <div class="slider-arrow slider-prev" (click)="slidePrev()">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+  </div>
+  <div class="slider-arrow slider-next" (click)="slideNext()">
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </div>
+</div>
+<ion-slides *ngIf="slideOpts" pager="false" [options]="slideOpts">
+  <ion-slide *ngFor="let drink of drinks">
+    <div class="slider-wrapper">
+      <ion-card class="drink-item">
+        <ion-card-content>
+          <div class="drink-icon" [ngClass]="drink.icon"></div>
+          <div class="drink-name">{{drink.name}}</div>
+          <div class="drink-alc-percentage">{{drink.alcPercentage}}%</div>
+          <div class="drink-alc-volume">{{drink.alcVolume}}L</div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-slide>
+</ion-slides>
