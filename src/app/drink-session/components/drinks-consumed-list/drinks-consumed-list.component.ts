@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+
+import { Drink, DrinkService } from 'app/core';
 
 
 @Component({
@@ -8,72 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrinksConsumedListComponent implements OnInit {
 
-  drinksConsumed: Array<{date: string; icon: string; alcVolume: number; alcPercentage: number}>;
+  drinksConsumed: Array<Drink>;
 
 
-  constructor() {
-    this.drinksConsumed = [
-      {
-        date: '21.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '22.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-      {
-        date: '23.03.2021',
-        icon: 'beer',
-        alcVolume: 0.5,
-        alcPercentage: 4.5,
-      },
-    ];
+  constructor(private readonly drinkService: DrinkService) {
+    this.drinkService.getDrinks().pipe(take(1)).subscribe((drinks) => {
+      this.drinksConsumed = drinks;
+    });
   }
 
 
