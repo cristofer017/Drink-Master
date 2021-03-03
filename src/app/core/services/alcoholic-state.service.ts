@@ -9,9 +9,7 @@ export class AlcoholicStateService {
 
   calc(drinkUses: Array<DrinkItem>, userData: UserData, timeOffsetHours: number, foodIndex: number): string {
     const totalConsumedAlcoholMass = this.calcTotalAlcoholMass(drinkUses);
-
     const alcoholIndicator = this.calcAlcoholIndicator(userData, totalConsumedAlcoholMass, timeOffsetHours, foodIndex);
-
     const level = this.identifyLevel(alcoholIndicator);
 
     return (level.state);
@@ -38,7 +36,6 @@ export class AlcoholicStateService {
   private calcAlcoholIndicator(userData: UserData, totalConsumedAlcoholMass: number, timeOffsetHours: number, foodIndex: number) {
     const weightSexConstant = (userData.men ? 0.68 : 0.55);
     const timeSexConstant = (userData.men ? 0.015 : 0.017);
-
     const result = (
       ((totalConsumedAlcoholMass * 100) / (userData.weight * weightSexConstant) - (timeSexConstant * timeOffsetHours)) * foodIndex * 1000
     );
