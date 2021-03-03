@@ -19,6 +19,13 @@
       </ng-container>
     </ion-item>
   </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="startSession()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <settings-actions
     (openToggled)="onActionsToggled($event)">
   </settings-actions>

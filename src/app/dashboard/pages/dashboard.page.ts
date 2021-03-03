@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { from, of } from 'rxjs';
+import { Component } from '@angular/core';
 import { concatAll, delay, startWith } from 'rxjs/operators';
+import { from, of } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
 })
-export class DashboardPage implements OnInit {
+export class DashboardPage {
 
   startDateDrink: string;
   finished = false;
@@ -20,15 +22,20 @@ export class DashboardPage implements OnInit {
     startWith(of({value: 100, name: 'Initializing'})),
     concatAll()
   );
-  constructor() {
+
+
+  constructor(private readonly router: Router) {
     this.startDateDrink = '2019-10-01T15:43:40.394Z'
   }
 
-  ngOnInit() {
-  }
 
   onActionsToggled(value: boolean) {
     this.actionsOpened = value;
+  }
+
+
+  startSession() {
+    this.router.navigate(['./drink-session']);
   }
 
 }
