@@ -1,0 +1,13 @@
+<ion-fab class="account-actions" vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button [ngClass]="{'fab-button-close-active': opened}" (click)="showActionList()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list *ngIf="opened" side="top">
+    <div class="actions">
+      <div *ngFor="let settingActions of settingsActions" class="item-actions" (click)="onSettingActionClick(settingActions.redirectPath)">
+        <div>{{settingsActions}}</div>
+      </div>
+    </div>
+  </ion-fab-list>
+  <ion-backdrop *ngIf="opened" class="account-actions-overlay" (ionBackdropTap)="closeActionList()"></ion-backdrop>
+</ion-fab>

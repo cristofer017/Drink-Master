@@ -26,38 +26,6 @@ export class DrinksSliderComponent implements OnInit {
       this.drinks = drinks;
       this.initSlider();
     });
-    // this.drinks = [
-    //   {
-    //     icon: 'beer',
-    //     name: 'beer',
-    //     alcVolume: 0.5,
-    //     alcPercentage: 4.5,
-    //   },
-    //   {
-    //     icon: 'vin',
-    //     name: 'vin',
-    //     alcVolume: 0.1,
-    //     alcPercentage: 12,
-    //   },
-    //   {
-    //     icon: 'sampanie',
-    //     name: 'Sampanie',
-    //     alcVolume: 0.1,
-    //     alcPercentage: 13,
-    //   },
-    //   {
-    //     icon: 'sampanie',
-    //     name: 'sampanie 2',
-    //     alcVolume: 0.1,
-    //     alcPercentage: 20,
-    //   },
-    //   {
-    //     icon: 'beer',
-    //     name: 'bere2',
-    //     alcVolume: 0.1,
-    //     alcPercentage: 20,
-    //   },
-    // ];
   }
 
 

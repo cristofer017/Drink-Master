@@ -16,7 +16,7 @@ export class DrinkService {
   getDrinks(): Observable<Array<Drink>> {
     return this.storageService.getItem('drinks').pipe(
       switchMap((data: string) => {
-        const drinks: Array<Drink> = JSON.parse(data);
+        const drinks: Array<Drink> = data ? JSON.parse(data) : [];
 
         return of(drinks);
       }),

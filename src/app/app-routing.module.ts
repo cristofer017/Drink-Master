@@ -11,9 +11,17 @@ const routes: Routes = [
     loadChildren: () => import('./drink-session/drink-session.module').then( m => m.DrinkSessionModule)
   },
   {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then(module => module.SettingsModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardPageModule)
   },
 ];
 

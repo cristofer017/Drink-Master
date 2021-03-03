@@ -1,4 +1,4 @@
-<div class="slider-arrows">
+<div *ngIf="drinks?.length" class="slider-arrows">
   <div class="slider-arrow slider-prev" (click)="slidePrev()">
     <ion-icon name="chevron-back-outline"></ion-icon>
   </div>
@@ -6,7 +6,7 @@
     <ion-icon name="chevron-forward-outline"></ion-icon>
   </div>
 </div>
-<ion-slides *ngIf="slideOpts" pager="false" [options]="slideOpts">
+<ion-slides *ngIf="slideOpts && drinks?.length" pager="false" [options]="slideOpts">
   <ion-slide *ngFor="let drink of drinks">
     <div class="slider-wrapper">
       <ion-card class="drink-item">
