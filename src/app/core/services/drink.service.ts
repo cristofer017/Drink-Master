@@ -23,4 +23,14 @@ export class DrinkService {
     );
   }
 
+
+  setDrinks(drink: Drink) {
+    this.getDrinks().subscribe((data) => {
+      const drinkList = data;
+      drinkList.push(drink);
+
+      this.storageService.setItem('drinks', JSON.stringify(drinkList));
+    });
+  }
+
 }
