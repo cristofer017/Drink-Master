@@ -3,23 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DrinkSessionComponent } from './pages';
 
-
 const routes: Routes = [
   {
-    path: 'drink-session',
+    path: '',
     component: DrinkSessionComponent,
-  },
+  }
 ];
 
-
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes),
-  ],
-  exports: [
-    RouterModule,
-  ],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-
-export class DrinkSessionRoutingModule {
-}
+export class DrinkSessionRoutingModule {}
