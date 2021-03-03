@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
 })
-export class DashboardPage implements OnInit {
+export class DashboardPage {
 
   finished = false;
   actionsOpened: boolean;
@@ -17,11 +17,14 @@ export class DashboardPage implements OnInit {
   constructor(private readonly router: Router) {
   }
 
-  ngOnInit() {
-  }
 
   onActionsToggled(value: boolean) {
     this.actionsOpened = value;
+  }
+
+
+  startSession() {
+    this.router.navigate(['./drink-session']);
   }
 
 }

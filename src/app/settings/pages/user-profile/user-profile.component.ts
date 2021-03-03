@@ -26,7 +26,7 @@ export class UserProfileComponent {
       height: ['', [Validators.required]],
       gender: ['', [Validators.required]],
       birthYear: ['', [Validators.required, Validators.min(1930), Validators.max(2020)]],
-    })
+    });
   }
 
 
