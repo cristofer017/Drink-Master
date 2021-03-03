@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 
 import { ALCOHOL_LEVELS } from '../types';
-import { AlcoholLevel, DrinkItem, UserData } from '../structures';
+import { AlcoholLevel, Drink, UserData } from '../structures';
 
 
 @Injectable()
 export class AlcoholicStateService {
 
-  calc(drinkUses: Array<DrinkItem>, userData: UserData, timeOffsetHours: number, foodIndex: number): string {
+  calc(drinkUses: Array<Drink>, userData: UserData, timeOffsetHours: number, foodIndex: number): string {
     const totalConsumedAlcoholMass = this.calcTotalAlcoholMass(drinkUses);
     const alcoholIndicator = this.calcAlcoholIndicator(userData, totalConsumedAlcoholMass, timeOffsetHours, foodIndex);
     const level = this.identifyLevel(alcoholIndicator);
@@ -16,9 +16,9 @@ export class AlcoholicStateService {
   }
 
 
-  private calcTotalAlcoholMass(drinkUses: Array<DrinkItem>): number {
+  private calcTotalAlcoholMass(drinkUses: Array<Drink>): number {
     let total = 0;
-    drinkUses.forEach((drinkItem: DrinkItem) => {
+    drinkUses.forEach((drinkItem: Drink) => {
       total += this.calcAlcoholMass(drinkItem);
     });
 
@@ -26,8 +26,8 @@ export class AlcoholicStateService {
   }
 
 
-  private calcAlcoholMass(drinkItem: DrinkItem): number {
-    const mass = (drinkItem.amount * drinkItem.alcoholPercentage) / 100;
+  private calcAlcoholMass(drinkItem: Drink): number {
+    const mass = (drinkItem.alcVolume * drinkItem.alcPercentage) / 100;
 
     return mass;
   }
