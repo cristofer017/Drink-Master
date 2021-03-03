@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-list>
+    <ion-list-header>
+      Drink list
+    </ion-list-header>
+
+    <ion-item class="list">
+      <div class="date ellipsis">{{startDateDrink | date:'longDate' }}</div>
+      <ng-container *ngIf="requests$ | async as requests">
+        <app-progress-bar class="progress-bar" [value]="requests.value" [name]="requests.name" (complete)="finished = true">
+        </app-progress-bar>
+      </ng-container>
+    </ion-item>
+  </ion-list>
+  <settings-actions
+    (openToggled)="onActionsToggled($event)">
+  </settings-actions>
 </ion-content>
