@@ -14,6 +14,7 @@ export class DashboardPage {
   actionsOpened: boolean;
   opened: boolean;
 
+
   constructor(private readonly router: Router) {
   }
 
@@ -26,5 +27,4 @@ export class DashboardPage {
   startSession() {
     this.router.navigate(['./drink-session']);
   }
-
 }
