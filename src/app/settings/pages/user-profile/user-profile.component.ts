@@ -8,6 +8,7 @@ import { StorageService } from 'app/core';
 @Component({
   selector: 'user-profile',
   templateUrl: './user-profile.component.html',
+  styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent {
 
@@ -30,7 +31,7 @@ export class UserProfileComponent {
 
   saveUserData() {
     this.storageService.setItem('userData', JSON.stringify(this.formGroup.value));
-    this.router.navigate(['./dashboard']);
+    this.router.navigate(['./drink-session']);
   }
 
 }

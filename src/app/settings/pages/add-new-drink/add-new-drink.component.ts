@@ -8,6 +8,7 @@ import { DrinkService, StorageService } from '../../../core/services';
 @Component({
   selector: 'add-new-drink',
   templateUrl: './add-new-drink.component.html',
+  styleUrls: ['./add-new-drink.component.scss'],
 })
 export class AddNewDrinkComponent {
 

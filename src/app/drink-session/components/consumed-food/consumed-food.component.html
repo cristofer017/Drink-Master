@@ -1,6 +1,6 @@
-<ion-card>
+<ion-card [formGroup]="formGroup">
   <div>Am mincat</div>
-  <ion-radio-group>
+  <ion-radio-group formControlName="consumedFood">
     <ion-item lines="none">
       <ion-label>Deloc</ion-label>
       <ion-radio slot="start" value="none"></ion-radio>

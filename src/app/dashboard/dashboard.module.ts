@@ -7,7 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './pages';
-import { ProgressBarComponent, SettingsActionsComponent } from './components';
+import {
+  DrinksConsumedListComponent,
+  DrinksConsumedRecordComponent,
+  ProgressBarComponent,
+  SettingsActionsComponent
+} from './components';
 
 
 @NgModule({
@@ -19,6 +24,8 @@ import { ProgressBarComponent, SettingsActionsComponent } from './components';
   ],
   declarations: [
     DashboardPage,
+    DrinksConsumedListComponent,
+    DrinksConsumedRecordComponent,
     ProgressBarComponent,
     SettingsActionsComponent,
   ]

@@ -1,0 +1,13 @@
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        {{itemDetails.date}}
+      </ion-col>
+
+      <ion-col>
+        <app-progress-bar class="progress-bar" [value]="itemDetails.value" [name]="itemDetails.alcPercentage"></app-progress-bar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
