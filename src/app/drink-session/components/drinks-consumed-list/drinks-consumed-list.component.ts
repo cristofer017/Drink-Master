@@ -31,6 +31,48 @@ export class DrinksConsumedListComponent implements OnInit {
         alcVolume: '0.5',
         alcPercentage: 4.5,
       },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
+      {
+        date: '23.03.2021',
+        icon: 'beer',
+        alcVolume: '0.5',
+        alcPercentage: 4.5,
+      },
     ];
   }
 
