@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { DrinkSessionRoutingModule } from './drink-session-routing.module';
 
-import { DrinksConsumedListComponent, DrinksConsumedRecordComponent, EditConsumedDrinksInfoModalComponent } from './components';
+import { DrinksConsumedListComponent, DrinksConsumedRecordComponent, DrinksSliderComponent, EditConsumedDrinksInfoModalComponent } from './components';
 import { DrinkSessionComponent } from './pages';
 
 
@@ -21,6 +21,7 @@ import { DrinkSessionComponent } from './pages';
   declarations: [
     DrinksConsumedListComponent,
     DrinksConsumedRecordComponent,
+    DrinksSliderComponent,
     DrinkSessionComponent,
     EditConsumedDrinksInfoModalComponent,
   ],
