@@ -20,13 +20,7 @@ export class NativeStorageMock {
   getItem(reference: string) {
     const value = this.cookieService.get(reference);
 
-    return value
-      ? Promise.resolve(value)
-      : Promise.reject({
-        code: 2, // ITEM_NOT_FOUND
-        exception: undefined,
-        source: 'mock',
-      });
+    return Promise.resolve(value);
   }
 
 }

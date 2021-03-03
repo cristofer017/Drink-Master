@@ -1,0 +1,41 @@
+<ion-header>
+  Adauga bautura
+</ion-header>
+<ion-content>
+  <div [formGroup]="formGroup">
+
+    <ion-select placeholder="Icon"
+                formControlName="icon">
+      <ion-select-option value="beer">beer</ion-select-option>
+      <ion-select-option value="cheers">wine</ion-select-option>
+      <ion-select-option value="cocktail">cocktail</ion-select-option>
+      <ion-select-option value="cheers">champagne</ion-select-option>
+    </ion-select>
+
+    <ion-item>
+      <ion-label position="floating">Drink Name</ion-label>
+      <ion-input type="text"
+                 name="name"
+                 formControlName="name">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Volume(litre)</ion-label>
+      <ion-input type="text"
+                 name="alcVolume"
+                 formControlName="alcVolume">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Alcohol percentage(%)</ion-label>
+      <ion-input type="text"
+                 name="alcPercentage"
+                 formControlName="alcPercentage">
+      </ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="formGroup.invalid" (click)="saveDrink()">Salveaza bautura</ion-button>
+  </div>
+</ion-content>

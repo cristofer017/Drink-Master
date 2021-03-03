@@ -7,6 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'drink-session',
+    loadChildren: () => import('./drink-session/drink-session.module').then( m => m.DrinkSessionModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then(module => module.SettingsModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
