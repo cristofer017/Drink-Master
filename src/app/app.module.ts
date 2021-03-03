@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule.forRoot(),
   ],
   providers: [
+    CookieService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: NativeStorage,
