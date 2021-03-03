@@ -1,15 +1,15 @@
-<ng-container>
+<div (click)="presentModal()">
   <ion-grid>
     <ion-row>
       <ion-col>
-        {{item.date}}
+        {{itemDetails.date}}
       </ion-col>
       <ion-col>
-        {{item.alcVolume}} L
+        {{itemDetails.alcVolume}} L
       </ion-col>
       <ion-col>
-        {{item.alcPercentage}}%
+        {{itemDetails.alcPercentage}} %
       </ion-col>
     </ion-row>
   </ion-grid>
-</ng-container>
+</div>

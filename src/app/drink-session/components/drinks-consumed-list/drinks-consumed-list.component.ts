@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrinksConsumedListComponent implements OnInit {
 
-  drinksConsumed: Array<{date: string; icon: string; alcVolume: string; alcPercentage: number}>;
+  drinksConsumed: Array<{date: string; icon: string; alcVolume: number; alcPercentage: number}>;
 
 
   constructor() {
@@ -16,61 +16,61 @@ export class DrinksConsumedListComponent implements OnInit {
       {
         date: '21.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '22.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
       {
         date: '23.03.2021',
         icon: 'beer',
-        alcVolume: '0.5',
+        alcVolume: 0.5,
         alcPercentage: 4.5,
       },
     ];
