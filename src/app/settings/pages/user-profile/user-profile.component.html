@@ -1,37 +1,39 @@
-<div [formGroup]="formGroup">
+<ion-header>
+  Date utilizator
+</ion-header>
+<ion-content>
+  <div class="user-profile" [formGroup]="formGroup">
+    <ion-item>
+      <ion-label position="floating">weight (in kg)</ion-label>
+      <ion-input type="text"
+                 name="weight"
+                 formControlName="weight">
+      </ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating" class="main-label">weight</ion-label>
-    <ion-input type="text"
-               name="weight"
-               formControlName="weight">
-    </ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">height</ion-label>
+      <ion-input type="text"
+                 name="height"
+                 formControlName="height">
+      </ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating" class="main-label">height</ion-label>
-    <ion-input type="text"
-               name="height"
-               formControlName="height">
-    </ion-input>
-  </ion-item>
+    <ion-select placeholder="Gender"
+                formControlName="gender">
+      <ion-select-option value="male">Male</ion-select-option>
+      <ion-select-option value="female">Female</ion-select-option>
+    </ion-select>
 
-  <ion-item>
-    <ion-label position="floating" class="main-label">gender</ion-label>
-    <ion-input type="text"
-               name="gender"
-               formControlName="gender">
-    </ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Birth Year</ion-label>
+      <ion-input type="text"
+                 name="birthYear"
+                 formControlName="birthYear">
+      </ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating" class="main-label">birthYear</ion-label>
-    <ion-input type="text"
-               name="birthYear"
-               formControlName="birthYear">
-    </ion-input>
-  </ion-item>
+    <ion-button [disabled]="formGroup.invalid" (click)="saveUserData()">Salveaza datele</ion-button>
+  </div>
 
-
-  <ion-button></ion-button>
-</div>
+</ion-content>

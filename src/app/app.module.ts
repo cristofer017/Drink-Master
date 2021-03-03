@@ -6,12 +6,11 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
-import { CoreModule, IS_CORDOVA_DEFINED } from 'app/core';
-import { NativeStorageMock } from 'mocks';
+import { NativeStorageMock } from '../mocks';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SettingsModule } from './settings';
+import { CoreModule, IS_CORDOVA_DEFINED } from './core';
 
 
 @NgModule({
@@ -24,6 +23,7 @@ import { SettingsModule } from './settings';
     CoreModule.forRoot(),
   ],
   providers: [
+    CookieService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: NativeStorage,
