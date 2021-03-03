@@ -44,4 +44,13 @@ export class DrinkService {
     );
   }
 
+  setConsumableDrinks(drink: Drink) {
+    this.getDrinks().subscribe((data) => {
+      const drinksConsumedList = data;
+      drinksConsumedList.push(drink);
+
+      this.storageService.setItem('drinksConsumed', JSON.stringify(drinksConsumedList));
+    });
+  }
+
 }

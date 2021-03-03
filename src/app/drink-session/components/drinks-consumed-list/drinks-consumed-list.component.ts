@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs/operators';
 
 import { Drink, DrinkService } from 'app/core';
 
@@ -15,7 +14,7 @@ export class DrinksConsumedListComponent implements OnInit {
 
 
   constructor(private readonly drinkService: DrinkService) {
-    this.drinkService.getConsumedDrinks().pipe(take(1)).subscribe((drinks) => {
+    this.drinkService.getConsumedDrinks().subscribe((drinks) => {
       this.drinksConsumed = drinks;
     });
   }

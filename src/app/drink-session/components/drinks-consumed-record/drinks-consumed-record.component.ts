@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 import { ModalController } from '@ionic/angular';
 
-import { StorageService } from 'app/core';
+import { Drink, StorageService } from 'app/core';
 
 import { EditConsumedDrinksInfoModalComponent } from '../edit-consumed-drinks-info-modal/edit-consumed-drinks-info-modal.component';
 
@@ -11,16 +12,12 @@ import { EditConsumedDrinksInfoModalComponent } from '../edit-consumed-drinks-in
   templateUrl: './drinks-consumed-record.component.html',
   styleUrls: ['./drinks-consumed-record.component.scss'],
 })
-export class DrinksConsumedRecordComponent implements OnInit {
+export class DrinksConsumedRecordComponent {
 
-  @Input() item: {date: string; icon: string; alcVolume: string; alcPercentage: number};
+  @Input() item: Drink;
 
 
   constructor(private readonly modalController: ModalController, private readonly storageService: StorageService) {
-  }
-
-
-  ngOnInit() {
   }
 
 

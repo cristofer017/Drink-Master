@@ -9,7 +9,7 @@
 <ion-slides *ngIf="slideOpts && drinks?.length" pager="false" [options]="slideOpts">
   <ion-slide *ngFor="let drink of drinks">
     <div class="slider-wrapper">
-      <ion-card class="drink-item">
+      <ion-card class="drink-item" (click)="addDrinkTransaction(drink)">
         <ion-card-content>
           <div class="drink-icon" [ngClass]="drink.icon"></div>
           <div class="drink-name">{{drink.name}}</div>

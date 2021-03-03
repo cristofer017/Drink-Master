@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { take } from 'rxjs/operators';
 
-import { Drink, DrinkService } from 'app/core';
+import { Drink, DrinkService, StorageService } from 'app/core';
 
 
 @Component({
@@ -17,7 +17,8 @@ export class DrinksSliderComponent implements OnInit {
   slideOpts: {initialSlide: number; speed: number; slidesPerView: number};
   drinks: Array<Drink>;
 
-  constructor(private readonly drinkService: DrinkService) {
+
+  constructor(private readonly drinkService: DrinkService, private readonly storageService: StorageService) {
   }
 
 
@@ -33,8 +34,14 @@ export class DrinksSliderComponent implements OnInit {
     this.slides.slidePrev();
   }
 
+
   slideNext() {
     this.slides.slideNext();
+  }
+
+
+  addDrinkTransaction(drink: Drink) {
+    this.drinkService.setConsumableDrinks(drink);
   }
 
 
