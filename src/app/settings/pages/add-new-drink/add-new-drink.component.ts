@@ -26,7 +26,7 @@ export class AddNewDrinkComponent {
       name: ['', [Validators.required]],
       alcVolume: [''],
       alcPercentage: [''],
-    })
+    });
   }
 
 
