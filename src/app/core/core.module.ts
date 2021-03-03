@@ -3,7 +3,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AlcoholicStateService, StorageService } from './services';
+import { AlcoholicStateService, DrinkService, StorageService } from './services';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ export class CoreModule {
       ngModule: CoreModule,
       providers: [
         AlcoholicStateService,
+        DrinkService,
         StorageService,
       ],
     };
