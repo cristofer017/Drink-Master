@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { StorageService } from '../../../core/services';
+import { DrinkService, StorageService } from '../../../core/services';
 
 
 @Component({
   selector: 'add-new-drink',
   templateUrl: './add-new-drink.component.html',
+  styleUrls: ['./add-new-drink.component.scss'],
 })
 export class AddNewDrinkComponent {
 
@@ -16,6 +17,7 @@ export class AddNewDrinkComponent {
 
   constructor(
     private readonly storageService: StorageService,
+    private readonly drinkService: DrinkService,
     private readonly router: Router,
     formBuilder: FormBuilder,
   ) {
@@ -29,14 +31,8 @@ export class AddNewDrinkComponent {
 
 
   saveDrink() {
-    this.storageService.getItem('drinks').subscribe((data: string) => {
-      const drinkList = JSON.parse(data);
-      drinkList.push(this.formGroup.value);
-
-      this.storageService.setItem('drinks', JSON.stringify(drinkList));
-    });
-    this.formGroup.reset();
-    this.router.navigate(['./dashboard']);
+    this.drinkService.setDrinks(this.formGroup.value);
+    this.router.navigate(['./drink-session']);
   }
 
 }

@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 
 import { IonFab } from '@ionic/angular';
 
-import { SettingsActionInterface } from '../../structures/settings-action.interface';
+import { SettingsActionInterface } from '../../structures';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class SettingsActionsComponent implements OnInit, OnChanges {
   ) {
     this.openToggled = new EventEmitter();
     this.allSettingsActions = {
-      domestic_payment: {
+      user_data: {
         settingsTranslationKey: 'USER_DATA',
         redirectPath: 'settings/user-data',
       },

@@ -3,6 +3,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <drinks-consumed-list></drinks-consumed-list>
-  <drinks-slider></drinks-slider>
+  <div [formGroup]="formGroup">
+    <drinks-consumed-list></drinks-consumed-list>
+    <consumed-food formControlName="consumedFood"></consumed-food>
+    <drinks-slider></drinks-slider>
+  </div>
 </ion-content>
