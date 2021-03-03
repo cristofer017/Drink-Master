@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule, IS_CORDOVA_DEFINED } from './core';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
