@@ -23,7 +23,7 @@ export class UserProfileComponent {
       weight: ['', [Validators.required, Validators.min(30)]],
       height: ['', [Validators.required]],
       gender: ['', [Validators.required]],
-      birthYear: ['', [Validators.required, Validators.min(1950), Validators.max(2020)]],
+      birthYear: ['', [Validators.required, Validators.min(1930), Validators.max(2020)]],
     })
   }
 
