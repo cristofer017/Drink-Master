@@ -35,6 +35,7 @@ export class AddNewDrinkComponent {
 
       this.storageService.setItem('drinks', JSON.stringify(drinkList));
     });
+    this.formGroup.reset();
     this.router.navigate(['./dashboard']);
   }
 
