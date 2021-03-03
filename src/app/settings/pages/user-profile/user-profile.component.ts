@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { StorageService } from '../../../core/services';
 import { Router } from '@angular/router';
+
+import { StorageService } from '../../../core/services';
 
 
 
 @Component({
   selector: 'user-profile',
   templateUrl: './user-profile.component.html',
+  styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent {
 
@@ -30,7 +32,7 @@ export class UserProfileComponent {
 
   saveUserData() {
     this.storageService.setItem('userData', JSON.stringify(this.formGroup.value));
-    this.router.navigate(['./dashboard']);
+    this.router.navigate(['./drink-session']);
   }
 
 }

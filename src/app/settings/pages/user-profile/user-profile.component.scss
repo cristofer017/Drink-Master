@@ -1,0 +1,15 @@
+ion-content {
+  --padding-end: 24px;
+
+  ion-button {
+    margin: 0 auto;
+    width: 230px;
+    margin-top: 24px;
+    display: flex;
+  }
+}
+
+ion-header {
+  text-align: center;
+  padding: 24px;
+}
