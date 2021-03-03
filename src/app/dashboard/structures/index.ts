@@ -1,1 +1,1 @@
-export { SettingsActionInterface } from './settings-action.interface'
+export { SettingsActionInterface } from './settings-action.interface';
