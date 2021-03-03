@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { StorageService } from '../../../core/services';
 import { Router } from '@angular/router';
 
+import { StorageService } from 'app/core';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class UserProfileComponent {
       height: ['', [Validators.required]],
       gender: ['', [Validators.required]],
       birthYear: ['', [Validators.required, Validators.min(1930), Validators.max(2020)]],
-    })
+    });
   }
 
 

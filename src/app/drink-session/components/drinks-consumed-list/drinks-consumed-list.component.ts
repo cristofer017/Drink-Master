@@ -15,7 +15,7 @@ export class DrinksConsumedListComponent implements OnInit {
 
 
   constructor(private readonly drinkService: DrinkService) {
-    this.drinkService.getDrinks().pipe(take(1)).subscribe((drinks) => {
+    this.drinkService.getConsumedDrinks().pipe(take(1)).subscribe((drinks) => {
       this.drinksConsumed = drinks;
     });
   }
