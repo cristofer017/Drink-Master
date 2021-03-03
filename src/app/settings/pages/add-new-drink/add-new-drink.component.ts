@@ -20,7 +20,7 @@ export class AddNewDrinkComponent {
     formBuilder: FormBuilder,
   ) {
     this.formGroup = formBuilder.group({
-      // icon: ['', [Validators.required]],
+      icon: ['', [Validators.required]],
       name: ['', [Validators.required]],
       alcVolume: [''],
       alcPercentage: [''],

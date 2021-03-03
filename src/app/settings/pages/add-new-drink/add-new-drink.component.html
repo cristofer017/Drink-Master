@@ -1,8 +1,16 @@
 <ion-header>
-
+  Adauga bautura
 </ion-header>
 <ion-content>
   <div [formGroup]="formGroup">
+
+    <ion-select placeholder="Icon"
+                formControlName="icon">
+      <ion-select-option value="beer">beer</ion-select-option>
+      <ion-select-option value="wine">wine</ion-select-option>
+      <ion-select-option value="tequila">tequila</ion-select-option>
+      <ion-select-option value="whisky">whisky</ion-select-option>
+    </ion-select>
     <ion-item>
       <ion-label position="floating">Drink Name</ion-label>
       <ion-input type="text"
